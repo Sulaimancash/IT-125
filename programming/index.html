@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportSphere — Спортивный Портал</title>
+    <!-- Подключаем наш файл стилей -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Шапка / Навигация -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo" onclick="navigateTo('home')">
+                <div class="logo-icon">S</div>
+                <span class="logo-text">SPORT<span>SPHERE</span></span>
+            </div>
+
+            <!-- Навигация (10 страниц) -->
+            <nav class="nav-links">
+                <button onclick="navigateTo('home')" class="nav-btn active" data-page="home">Главная</button>
+                <button onclick="navigateTo('news')" class="nav-btn" data-page="news">Новости</button>
+                <button onclick="navigateTo('livescore')" class="nav-btn" data-page="livescore">Матчи LIVE</button>
+                <button onclick="navigateTo('tables')" class="nav-btn" data-page="tables">Таблицы</button>
+                <button onclick="navigateTo('exercises')" class="nav-btn" data-page="exercises">Тренировки</button>
+                <button onclick="navigateTo('calculator')" class="nav-btn" data-page="calculator">КБЖУ</button>
+                <button onclick="navigateTo('shop')" class="nav-btn" data-page="shop">Магазин</button>
+                <button onclick="navigateTo('events')" class="nav-btn" data-page="events">Календарь</button>
+                <button onclick="navigateTo('quiz')" class="nav-btn" data-page="quiz">Квиз</button>
+                <button onclick="navigateTo('contacts')" class="nav-btn" data-page="contacts">Контакты</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной Контент -->
+    <main class="main-container">
+
+        <!-- 1. СТРАНИЦА: ГЛАВНАЯ -->
+        <section id="page-home" class="tab-content active">
+            <div class="hero">
+                <span class="badge">Все о спорте</span>
+                <h1>Мир профессионального спорта и фитнеса</h1>
+                <p>Свежие аналитики, онлайн-трансляции, тренировочные программы и спортивная экосистема в одном портале.
+                </p>
+                <div class="hero-btns">
+                    <button onclick="navigateTo('news')" class="btn btn-primary">Читать новости</button>
+                    <button onclick="navigateTo('livescore')" class="btn btn-secondary">Смотреть LIVE</button>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div onclick="navigateTo('calculator')" class="card pointer">
+                    <div class="card-icon">🧮</div>
+                    <h3>Фитнес-калькулятор</h3>
+                    <p>Рассчитайте персональную суточную норму калорий и белков.</p>
+                </div>
+                <div onclick="navigateTo('exercises')" class="card pointer">
+                    <div class="card-icon">🏋️‍♂️</div>
+                    <h3>База упражнений</h3>
+                    <p>Готовые программы и правильная техника выполнения движения.</p>
+                </div>
+                <div onclick="navigateTo('shop')" class="card pointer">
+                    <div class="card-icon">🛒</div>
+                    <h3>Экипировка</h3>
+                    <p>Фирменный магазин спортивного инвентаря и спорпита.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. СТРАНИЦА: НОВОСТИ -->
+        <section id="page-news" class="tab-content">
+            <h2>Последние события</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-img bg-foot"></div>
+                    <div class="news-body">
+                        <span class="category">Футбол</span>
+                        <h3>Разбор финала Лиги Чемпионов: ключевые решения</h3>
+                        <p>Анализируем, как построение полузащиты определило исход важнейшего матча сезона.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img bg-basket"></div>
+                    <div class="news-body">
+                        <span class="category">Баскетбол</span>
+                        <h3>Рекорд сезона по очкам в матче НБА</h3>
+                        <p>Потрясающая результативность и овертайм, который войдет в историю лиги.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img bg-fit"></div>
+                    <div class="news-body">
+                        <span class="category">Фитнес</span>
+                        <h3>5 ошибок при приседаниях со штангой</h3>
+                        <p>Как уберечь поясницу и колени, получив максимальный эффект от упражнения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. СТРАНИЦА: МАТЧИ LIVE -->
+        <section id="page-livescore" class="tab-content">
+            <h2>Матчи в прямом эфире <span class="live-dot"></span></h2>
+            <div class="matches-list">
+                <div class="match-card">
+                    <div class="team align-right">
+                        <span class="team-name">Реал Мадрид</span>
+                        <div class="team-logo">RMA</div>
+                    </div>
+                    <div class="score-box">
+                        <span class="score">2 : 1</span>
+                        <span class="match-time">78' мин</span>
+                    </div>
+                    <div class="team">
+                        <div class="team-logo">BAR</div>
+                        <span class="team-name">Барселона</span>
+                    </div>
+                </div>
+
+                <div class="match-card">
+                    <div class="team align-right">
+                        <span class="team-name">Лос-Анджелес Лейкерс</span>
+                        <div class="team-logo">LAL</div>
+                    </div>
+                    <div class="score-box">
+                        <span class="score">104 : 98</span>
+                        <span class="match-time">4-я четверть</span>
+                    </div>
+                    <div class="team">
+                        <div class="team-logo">GSW</div>
+                        <span class="team-name">Голден Стэйт</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. СТРАНИЦА: ТУРНИРНЫЕ ТАБЛИЦЫ -->
+        <section id="page-tables" class="tab-content">
+            <h2>Турнирная таблица</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Команда</th>
+                            <th>Игры</th>
+                            <th>Победы</th>
+                            <th>Ничьи</th>
+                            <th>Поражения</th>
+                            <th>Очки</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pos">1</td>
+                            <td class="team-title">Манчестер Сити</td>
+                            <td>28</td>
+                            <td>20</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td class="pts">65</td>
+                        </tr>
+                        <tr>
+                            <td class="pos">2</td>
+                            <td class="team-title">Арсенал</td>
+                            <td>28</td>
+                            <td>19</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td class="pts">63</td>
+                        </tr>
+                        <tr>
+                            <td class="pos">3</td>
+                            <td class="team-title">Ливерпуль</td>
+                            <td>28</td>
+                            <td>18</td>
+                            <td>7</td>
+                            <td>3</td>
+                            <td class="pts">61</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. СТРАНИЦА: ТРЕНИРОВКИ -->
+        <section id="page-exercises" class="tab-content">
+            <h2>Каталог Упражнений</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Жим штанги лежа</h3>
+                        <span class="tag">Грудь</span>
+                    </div>
+                    <p>Базовое упражнение для развития грудных мышц. Сведите лопатки, удерживайте упор ногами в пол и
+                        плавно опускайте гриф.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Приседания со штангой</h3>
+                        <span class="tag">Ноги</span>
+                    </div>
+                    <p>Фундаментальное движение для нижней части тела. Держите спину прямой, направляйте колени в
+                        сторону носков.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. СТРАНИЦА: КАЛЬКУЛЯТОР КБЖУ -->
+        <section id="page-calculator" class="tab-content">
+            <h2>Калькулятор суточной нормы (КБЖУ)</h2>
+            <div class="form-box">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Возраст</label>
+                        <input id="calcAge" type="number" value="25">
+                    </div>
+                    <div class="form-group">
+                        <label>Вес (кг)</label>
+                        <input id="calcWeight" type="number" value="75">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Рост (см)</label>
+                    <input id="calcHeight" type="number" value="180">
+                </div>
+                <button onclick="calculateCalories()" class="btn btn-primary full-width">Рассчитать</button>
+
+                <div id="calcResult" class="result-box hidden">
+                    <p>Ваша суточная норма:</p>
+                    <p id="kcalVal" class="result-value">0 ккал</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. СТРАНИЦА: МАГАЗИН -->
+        
+        <section id="page-shop" class="tab-content">
+    <h2>Спортивный магазин</h2>
+
+    <div id="product-grid" class="shop-grid"></div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        <!-- <section id="page-shop" class="tab-content">
+            <h2>Спортивный магазин</h2>
+            <div class="shop-grid">
+                <div class="product-card">
+                    <div class="product-icon">🧴</div>
+                    <h3>Протеин Whey Gold 100%</h3>
+                    <p>Сывороточный протеин премиум качества для набора массы.</p>
+                    <div class="product-footer">
+                        <span class="price">3 400 ₽</span>
+                        <button onclick="addToCart()" class="btn btn-secondary">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🧘‍♂️</div>
+                    <h3>Фитнес-коврик PRO</h3>
+                    <p>Нескользящий износостойкий коврик для йоги и растяжки.</p>
+                    <div class="product-footer">
+                        <span class="price">1 800 ₽</span>
+                        <button onclick="addToCart()" class="btn btn-secondary">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- 8. СТРАНИЦА: КАЛЕНДАРЬ СОБЫТИЙ -->
+        <section id="page-events" class="tab-content">
+            <h2>Предстоящие турниры</h2>
+            <div class="events-list">
+                <div class="event-item">
+                    <div>
+                        <span class="event-date">15 Ноября 2026</span>
+                        <h4>Городской Полумарафон</h4>
+                    </div>
+                    <span class="tag">Легкая атлетика</span>
+                </div>
+                <div class="event-item">
+                    <div>
+                        <span class="event-date">22 Декабря 2026</span>
+                        <h4>Чемпионат по Кроссфиту</h4>
+                    </div>
+                    <span class="tag">Силовой спорт</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. СТРАНИЦА: СПОРТИВНЫЙ КВИЗ -->
+        <section id="page-quiz" class="tab-content">
+            <h2>Проверь свои знания</h2>
+            <div class="form-box">
+                <p class="quiz-question">Сколько игроков от одной команды одновременно находится на футбольном поле?</p>
+                <div class="quiz-options">
+                    <button onclick="checkAnswer(false, this)" class="quiz-opt">10 игроков</button>
+                    <button onclick="checkAnswer(true, this)" class="quiz-opt">11 игроков</button>
+                    <button onclick="checkAnswer(false, this)" class="quiz-opt">12 игроков</button>
+                </div>
+                <p id="quizRes" class="quiz-result hidden"></p>
+            </div>
+        </section>
+
+        <!-- 10. СТРАНИЦА: КОНТАКТЫ -->
+        <section id="page-contacts" class="tab-content">
+            <h2>Связаться с нами</h2>
+            <div class="form-box">
+                <!-- ФИО -->
+                <div class="form-group">
+                    <label for="contactFio">ФИО</label>
+                    <input type="text" id="contactFio" placeholder="Иванов Иван Иванович">
+                    <span id="fioError" class="error-message"></span>
+                </div>
+
+                <!-- Телефон -->
+                <div class="form-group">
+                    <label for="contactPhone">Номер телефона</label>
+                    <input type="tel" id="contactPhone" placeholder="+996 (777) 77-77-77">
+                    <span id="phoneError" class="error-message"></span>
+                </div>
+
+                <!-- Почта -->
+                <div class="form-group">
+                    <label for="contactEmail">Электронная почта</label>
+                    <input type="email" id="contactEmail" placeholder="example@domain.com">
+                    <span id="emailError" class="error-message"></span>
+                </div>
+
+                <!-- Сообщение -->
+                <div class="form-group">
+                    <label for="contactMessage">Сообщение</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Ваш вопрос или предложение..."></textarea>
+                    <span id="messageError" class="error-message"></span>
+                </div>
+
+                <button onclick="sendMessage()" class="btn btn-primary full-width">Отправить</button>
+            </div>
+        </section>
+
+    </main>
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ DETAIL VIEW -->
+    <section id="detail-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-btn" class="close">&times;</span>
+            <div id="detail-card"></div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <p>© 2026 SportSphere. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем наш файл скриптов -->
+    <script src="index.js"></script>
+</body>
+
+</html>
